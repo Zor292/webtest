@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Threads - Premium Clothing</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo">Urban Threads</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="/cart">Cart (<span id="cart-count">0</span>)</a></li>
+        <li id="auth-links"><a href="/login">Login</a> | <a href="/register">Register</a></li>
+        <li id="user-menu" style="display:none">
+          <a href="#" id="user-name-link"></a>
+          <a href="/admin" id="admin-link" style="display:none">Admin</a>
+          <a href="#" id="logout-btn">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Style That Speaks</h1>
+      <p>Discover the latest trends in fashion. Quality clothing for every occasion.</p>
+      <a href="/shop" class="btn btn-primary">Shop Now</a>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature">
+        <h3>Free Shipping</h3>
+        <p>On orders over $50</p>
+      </div>
+      <div class="feature">
+        <h3>Easy Returns</h3>
+        <p>30-day return policy</p>
+      </div>
+      <div class="feature">
+        <h3>Secure Payment</h3>
+        <p>100% secure checkout</p>
+      </div>
+      <div class="feature">
+        <h3>24/7 Support</h3>
+        <p>Dedicated customer service</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories">
+    <div class="container">
+      <h2>Shop by Category</h2>
+      <div class="category-grid">
+        <a href="/shop?category=men" class="category-card">
+          <div class="category-icon">👔</div>
+          <h3>Men</h3>
+        </a>
+        <a href="/shop?category=women" class="category-card">
+          <div class="category-icon">👗</div>
+          <h3>Women</h3>
+        </a>
+        <a href="/shop?category=kids" class="category-card">
+          <div class="category-icon">👕</div>
+          <h3>Kids</h3>
+        </a>
+        <a href="/shop?category=accessories" class="category-card">
+          <div class="category-icon">👜</div>
+          <h3>Accessories</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-section">
+    <div class="container">
+      <h2>Featured Products</h2>
+      <div class="product-grid" id="featured-products">
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Urban Threads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script>
+    checkAuth();
+    loadFeaturedProducts();
+  </script>
+</body>
+</html>

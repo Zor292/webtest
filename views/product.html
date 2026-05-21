@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product - Urban Threads</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo">Urban Threads</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/shop">Shop</a></li>
+        <li><a href="/cart">Cart (<span id="cart-count">0</span>)</a></li>
+        <li id="auth-links"><a href="/login">Login</a> | <a href="/register">Register</a></li>
+        <li id="user-menu" style="display:none">
+          <a href="#" id="user-name-link"></a>
+          <a href="/admin" id="admin-link" style="display:none">Admin</a>
+          <a href="#" id="logout-btn">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="product-detail">
+    <div class="container" id="product-container"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Urban Threads. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script>
+    checkAuth();
+    loadProductDetail();
+  </script>
+</body>
+</html>
